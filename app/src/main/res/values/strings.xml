@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">DonateIT</string>
+    <string name="logo">logo</string>
+    <string name="welcome1">Welcome for a better world</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="notamember">Not a member yet?</string>
+    <string name="signup">SignUp</string>
+    <string name="login">Login</string>
+    <string name="forgotopassword">Forgot Password?</string>
+    <string name="clickhere">Click Here</string>
+    <string name="welcome2">"Thank you for being Awesome"</string>
+    <string name="individual">Individual</string>
+    <string name="organization">Organization</string>
+    <string name="account">Account Type</string>
+    <string name="welcomesignup">Join us to make a better World</string>
+    <string name="contactNo">Phone Number</string>4
+    <string name="EducationHelp">Education Help</string>
+    <string name="goaheadsavealife">Go ahead , Save a life</string>
+
+    <string-array name="categories">
+
+        <item>Free Services</item>
+        <item>Food</item>
+        <item>Home items</item>
+        <item>Education</item>
+        <item>Blood and Organ</item>
+    </string-array>
+
+    <string-array name="EnterOrgans">
+
+        <item>Kidney</item>
+        <item>Liver</item>
+        <item>Lungs</item>
+        <item>Heart</item>
+        <item>Pancreas</item>
+    </string-array>
+
+    <string-array name="BloodType">
+
+        <item>O+</item>
+        <item>A+</item>
+        <item>B+</item>
+        <item>AB+</item>
+        <item>O-</item>
+        <item>A-</item>
+        <item>B-</item>
+        <item>AB-</item>
+
+    </string-array>
+    <string name="title_activity_selection">selection</string>
+
+</resources>
