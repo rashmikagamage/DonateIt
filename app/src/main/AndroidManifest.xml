@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".testgit"></activity>
+        <activity android:name=".counselling"></activity>
+        <activity android:name=".HowTo" />
+        <activity android:name=".Intro" />
+        <activity android:name=".SocialService" />
+        <activity android:name=".testgit" />
         <activity android:name=".forget_password" />
         <activity android:name=".selection" />
         <activity android:name=".viewmain" />
