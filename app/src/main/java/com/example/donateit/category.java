@@ -25,5 +25,11 @@ public class category extends AppCompatActivity {
                 startActivity(crisis);
             }
         });
+
+    }
+
+    public void goToSocialSer(View view){
+        Intent intent = new Intent(this, SocialService.class);
+        startActivity(intent);
     }
 }
