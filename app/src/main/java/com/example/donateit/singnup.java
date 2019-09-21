@@ -103,7 +103,7 @@ public class singnup extends AppCompatActivity {
                         user.setPassword(password2.getText().toString().trim());
                         user.setLocation(location.getText().toString().trim());
 
-                        db.child("user").setValue(user);
+                        db.child("user").push().setValue(user);
 
                         Toast.makeText(getApplicationContext(),user.getEmail(),Toast.LENGTH_LONG).show();
 
