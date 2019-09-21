@@ -2,6 +2,7 @@ package com.example.donateit;
 
 import android.content.Intent;
 
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -13,6 +14,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 public class singnup extends AppCompatActivity {
@@ -24,6 +27,7 @@ public class singnup extends AppCompatActivity {
         DatabaseReference db;
         User user;
         String uid;
+        FirebaseAuth auth;
 
         private  void clearControls(){
 
@@ -46,7 +50,7 @@ public class singnup extends AppCompatActivity {
 
         signup = findViewById(R.id.signup_signup);
         name = findViewById(R.id.name_signup);
-        email = findViewById(R.id.email_signup);
+        email = findViewById(R.id.email_signin);
         password1 = findViewById(R.id.password1);
         password2 = findViewById(R.id.password2);
         location = findViewById(R.id.location);
@@ -61,6 +65,7 @@ public class singnup extends AppCompatActivity {
             public void onClick(View view) {
 
                 db = FirebaseDatabase.getInstance().getReference().child("Users");
+                auth = FirebaseAuth.getInstance();
 
 
                 try{
@@ -105,16 +110,26 @@ public class singnup extends AppCompatActivity {
                         user.setPassword(password2.getText().toString().trim());
                         user.setLocation(location.getText().toString().trim());
 
-                        uid = Integer.toString(user.getUserID());
 
-                        db.child(uid).setValue(user);
-                        Toast.makeText(getApplicationContext(),"Registration successful !",Toast.LENGTH_LONG).show();
+                        //Authetication of email and password to FIREBASE
 
+                        auth.createUserWithEmailAndPassword(user.getEmail(), user.getPassword())
+                               .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                   @Override
+                                   public void onComplete(@NonNull Task<AuthResult> task) {
+                                       if (task.isSuccessful()) {
+                                           db.child(changeEmail(user.getEmail())).setValue(user);
+                                           Toast.makeText(getApplicationContext(), "Registration successful!", Toast.LENGTH_LONG).show();
+                                           Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                                           startActivity(intent);
+                                       }
+                                       else {
 
+                                           Toast.makeText(getApplicationContext(), "Registration failed! Please try again later", Toast.LENGTH_LONG).show();
 
-                        Intent signup_to_login = new Intent(getApplicationContext(),MainActivity.class);
-                        startActivity(signup_to_login);
-
+                                       }
+                                   }
+                               });
 
                         clearControls();
 
@@ -153,6 +168,16 @@ public class singnup extends AppCompatActivity {
             } else {
                 return android.util.Patterns.PHONE.matcher(phone).matches();
             }
+    }
+
+    public String changeEmail(String email){
+
+           String newEmail1 =  email.replace('@','0');
+           String newEmail2 = newEmail1.replace('.','0');
+           return newEmail2;
+
+
+
 
     }
 }

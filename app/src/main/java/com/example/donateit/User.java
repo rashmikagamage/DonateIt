@@ -9,7 +9,7 @@ public class User {
     private String location;
     private String accountType;
     private String phoneNumber;
-    static  int  userID;
+
 
     public String getPhoneNumber() {
         return phoneNumber;
@@ -61,12 +61,5 @@ public class User {
         this.password = password;
     }
 
-    public void setUserID(){
 
-        userID = userID+1;
-
-    }
-    public int getUserID(){
-        return userID;
-    }
 }
