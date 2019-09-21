@@ -22,6 +22,7 @@ public class singnup extends AppCompatActivity {
         EditText name,email,location,password1,password2,phoneNumber;
         DatabaseReference db;
         User user;
+        String uid;
 
         private  void clearControls(){
 
@@ -103,7 +104,9 @@ public class singnup extends AppCompatActivity {
                         user.setPassword(password2.getText().toString().trim());
                         user.setLocation(location.getText().toString().trim());
 
-                        db.child(user.getUserID()).setValue(user);
+                        uid = Integer.toString(user.getUserID());
+
+                        db.child(uid).setValue(user);
                         Toast.makeText(getApplicationContext(),"Registration successful !",Toast.LENGTH_LONG).show();
 
 

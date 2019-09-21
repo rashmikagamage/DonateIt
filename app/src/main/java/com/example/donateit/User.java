@@ -9,7 +9,7 @@ public class User {
     private String location;
     private String accountType;
     private String phoneNumber;
-    private String userID;
+    int  userID;
 
     public String getPhoneNumber() {
         return phoneNumber;
@@ -66,7 +66,7 @@ public class User {
         userID = userID+1;
 
     }
-    public String getUserID(){
+    public int getUserID(){
         return userID;
     }
 }
