@@ -4,11 +4,12 @@ import java.util.Date;
 
 public class User {
 
-    String email;
-     String name;
-   String location;
-    String accountType;
-     String phoneNumber;
+    private String email;
+    private String name;
+    private String location;
+    private String accountType;
+    private String phoneNumber;
+    private String userID;
 
     public String getPhoneNumber() {
         return phoneNumber;
@@ -58,5 +59,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setUserID(){
+
+        userID = userID+1;
+
+    }
+    public String getUserID(){
+        return userID;
     }
 }

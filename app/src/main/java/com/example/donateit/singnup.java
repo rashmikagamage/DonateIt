@@ -104,7 +104,7 @@ public class singnup extends AppCompatActivity {
                         user.setLocation(location.getText().toString().trim());
 
                         db.child(user.getEmail()).setValue(user);
-                       Toast.makeText(getApplicationContext(),"Registration successful !",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Registration successful !",Toast.LENGTH_LONG).show();
 
 
 
