@@ -79,9 +79,9 @@ public class singnup extends AppCompatActivity {
 
                         Toast.makeText(getApplicationContext(),"Please enter Location ",Toast.LENGTH_SHORT).show();
 
-                    }else if (TextUtils.isEmpty(password1.getText().toString())){
+                    }else if (TextUtils.isEmpty(password1.getText().toString()) ||  password1.getText().toString().length() < 6){
 
-                        Toast.makeText(getApplicationContext(),"Please enter A password ",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Password should be more than 5 characters",Toast.LENGTH_SHORT).show();
 
                     }else if (TextUtils.isEmpty(password2.getText().toString())){
 
