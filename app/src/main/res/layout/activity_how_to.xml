@@ -4,28 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="#9BF1E9"
     tools:context=".HowTo">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="385dp"
+        android:layout_height="202dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="588dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/lendhand" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="298dp"
-        android:layout_height="513dp"
+        android:layout_width="371dp"
+        android:layout_height="443dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="80dp"
-        android:text="Social workers are trained with proper education, experience, and dedication to help individuals whenever and wherever they need it.
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Social workers are trained with proper education, experience, and dedication to help individuals whenever and wherever they need it.\n\n
 It takes a bachelor's, masters, or doctoral social work degree — with a minimum number of hours in supervised fieldwork — to become a social worker 
-The BSW is a Bachelor’s of Social Work degree.This is the only bachelor’s level human service degree whose educational programs are accredited by a national body, which is the Council on Social Work Education (CSWE).
-The CSWE accreditation process insures that the programs meet national standards on all levels.
-Through this process, social work students receive appropriate education and training to better serve our clients."
+The BSW is a Bachelor’s of Social Work degree.\n\n\n This is the only bachelor’s level human service degree whose educational programs are accredited by a national body, which is the Council on Social Work Education (CSWE).\n\n\n
+The CSWE accreditation process insures that the programs meet national standards on all levels.\n\n
+Through this process, social work students receive appropriate education and training to better serve our clients.\n\n Press the button for more details :)"
         android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText2"
@@ -40,10 +57,44 @@ Through this process, social work students receive appropriate education and tra
         android:ems="10"
         android:inputType="textPersonName"
         android:text="How to become a Social Worker"
+        android:typeface="serif"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:typeface="serif"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="398dp"
+        android:layout_height="486dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintVertical_bias="0.037"></LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="158dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="browser1"
+        android:shadowColor="#009688"
+        android:text="Social Services"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

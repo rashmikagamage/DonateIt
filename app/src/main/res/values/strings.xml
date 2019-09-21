@@ -50,5 +50,6 @@
 
     </string-array>
     <string name="title_activity_selection">selection</string>
+    <string name="health_care">Health Care</string>
 
 </resources>

@@ -13,7 +13,7 @@ public class SocialService extends AppCompatActivity {
         setContentView(R.layout.activity_social_service);
     }
 
-    public void goToSocialSer(View view){
+    public void goToIntro(View view){
         Intent intent = new Intent(this, Intro.class);
         startActivity(intent);
     }
