@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.upup);
+        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.backgrorund1);
         signup = findViewById(R.id.singup_login);
         forget_password = findViewById(R.id.forgetPassword);
         login = findViewById(R.id.login);
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 mediaPlayer.setLooping(true);
             }
 
-       });//background video
+       });
 
         //SIGNUP PAGE
 

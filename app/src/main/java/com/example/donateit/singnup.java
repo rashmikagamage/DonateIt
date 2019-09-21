@@ -2,6 +2,8 @@ package com.example.donateit;
 
 import android.content.Intent;
 
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,17 +32,6 @@ public class singnup extends AppCompatActivity {
         String uid;
         FirebaseAuth auth;
 
-        private  void clearControls(){
-
-            name.setText("");
-            email.setText("");
-            location.setText("");
-            password1.setText("");
-            password2.setText("");
-            phoneNumber.setText("");
-
-        }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +39,6 @@ public class singnup extends AppCompatActivity {
         setContentView(R.layout.activity_singnup);
 
         //get id of instances
-
         signup = findViewById(R.id.signup_signup);
         name = findViewById(R.id.name_signup);
         email = findViewById(R.id.email_signin);
@@ -131,7 +122,7 @@ public class singnup extends AppCompatActivity {
                                    }
                                });
 
-                        clearControls();
+
 
 
                     }
