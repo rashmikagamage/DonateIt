@@ -17,6 +17,7 @@
     <string name="contactNo">Phone Number</string>4
     <string name="EducationHelp">Education Help</string>
     <string name="goaheadsavealife">Go ahead , Save a life</string>
+    <string name="retypepassword">Re Type Password</string>
 
     <string-array name="categories">
 
