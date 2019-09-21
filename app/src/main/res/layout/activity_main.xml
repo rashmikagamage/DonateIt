@@ -17,8 +17,10 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/email_signin"
@@ -33,8 +35,8 @@
         android:ems="10"
         android:hint="@string/Email"
         android:inputType="textEmailAddress"
-        android:textColor="#FFC107"
-        android:textColorHint="#F9FAF7"
+
+        android:textColorHint="#FCFDFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -114,22 +116,22 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.707"
+        app:layout_constraintHorizontal_bias="0.646"
         app:layout_constraintStart_toStartOf="@+id/videoView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
+        app:layout_constraintVertical_bias="0.824" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="180dp"
-        android:layout_height="31dp"
+        android:layout_width="163dp"
+        android:layout_height="32dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/forgotopassword"
         android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/forgetPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -145,10 +147,10 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="@+id/videoView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintHorizontal_bias="0.77"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.926" />
+        app:layout_constraintVertical_bias="0.884" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
