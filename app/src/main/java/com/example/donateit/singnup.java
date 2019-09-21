@@ -58,7 +58,7 @@ public class singnup extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                db = FirebaseDatabase.getInstance().getReference().child("User");
+                db = FirebaseDatabase.getInstance().getReference().child("Users");
 
 
                 try{
@@ -103,7 +103,7 @@ public class singnup extends AppCompatActivity {
                         user.setPassword(password2.getText().toString().trim());
                         user.setLocation(location.getText().toString().trim());
 
-                        db.child("user").push().setValue(user);
+                        db.child(user.getEmail()).setValue(user);
 
                         Toast.makeText(getApplicationContext(),user.getEmail(),Toast.LENGTH_LONG).show();
 
