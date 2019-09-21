@@ -104,12 +104,15 @@ public class singnup extends AppCompatActivity {
                         user.setLocation(location.getText().toString().trim());
 
                         db.child(user.getEmail()).setValue(user);
+                       Toast.makeText(getApplicationContext(),"Registration successful !",Toast.LENGTH_LONG).show();
 
-                        Toast.makeText(getApplicationContext(),user.getEmail(),Toast.LENGTH_LONG).show();
+
 
                         Intent signup_to_login = new Intent(getApplicationContext(),MainActivity.class);
                         startActivity(signup_to_login);
-                        //clearControls();
+
+
+                        clearControls();
 
 
                     }
