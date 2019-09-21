@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
+import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
