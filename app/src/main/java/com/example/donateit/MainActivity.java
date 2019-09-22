@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (TextUtils.isEmpty(email.getText().toString()) || !singnup.isValidEmail(email.getText().toString())) {
-            Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Please enter A valid email...", Toast.LENGTH_LONG).show();
             return;
         }
         if (TextUtils.isEmpty(password.getText().toString())) {
