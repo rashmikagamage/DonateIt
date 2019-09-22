@@ -35,8 +35,6 @@
         android:ems="10"
         android:hint="@string/Email"
         android:inputType="textEmailAddress"
-
-        android:textColorHint="#FCFDFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,7 +58,6 @@
         android:ems="10"
         android:hint="@string/Password"
         android:inputType="textPassword"
-        android:textColorHint="#FCFDFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

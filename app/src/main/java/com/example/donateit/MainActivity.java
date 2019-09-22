@@ -23,10 +23,12 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button signup,forget_password,login;
-    EditText email,password;
+    private Button signup,forget_password,login;
+    private EditText email,password;
     private VideoView mVideoView;
-    FirebaseAuth firebaseAuth;
+    private FirebaseAuth firebaseAuth;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.backgrorund1);
+        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.ab);
         signup = findViewById(R.id.singup_login);
         forget_password = findViewById(R.id.forgetPassword);
         login = findViewById(R.id.login);
@@ -99,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        if (TextUtils.isEmpty(email.getText().toString())) {
+        if (TextUtils.isEmpty(email.getText().toString()) || !singnup.isValidEmail(email.getText().toString())) {
             Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_LONG).show();
             return;
         }
