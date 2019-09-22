@@ -9,6 +9,21 @@
     tools:context=".category">
 
     <Button
+        android:id="@+id/health_care2"
+        android:layout_width="118dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="8dp"
+
+
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/health"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/home_items"
+        app:layout_constraintTop_toBottomOf="@+id/food" />
+
+    <Button
         android:id="@+id/crisis_help"
         android:layout_width="111dp"
         android:layout_height="111dp"
@@ -40,14 +55,12 @@
         android:layout_width="107dp"
         android:layout_height="113dp"
         android:layout_marginStart="44dp"
-        android:layout_marginEnd="8dp"
 
 
+        android:layout_marginTop="80dp"
         android:background="@drawable/home"
-        app:layout_constraintBaseline_toBaselineOf="@+id/health_care"
-        app:layout_constraintEnd_toStartOf="@+id/health_care"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/education_help" />
 
     <Button
         android:id="@+id/food"
@@ -64,42 +77,32 @@
         app:layout_constraintTop_toBottomOf="@+id/select_category" />
 
     <Button
-        android:id="@+id/health_care"
-        android:layout_width="118dp"
-        android:layout_height="123dp"
-        android:layout_marginTop="73dp"
-
-
-        android:layout_marginEnd="64dp"
-        android:background="@drawable/health"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/food" />
-
-    <Button
         android:id="@+id/social_servicebtn"
-        android:layout_width="118dp"
-        android:layout_height="123dp"
-        android:layout_marginTop="268dp"
+        android:layout_width="111dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="8dp"
 
 
-        android:layout_marginEnd="64dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="52dp"
         android:background="@drawable/health"
-        android:onClick="goToSocialSer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/food" />
+        app:layout_constraintStart_toEndOf="@+id/crisis_help"
+        app:layout_constraintTop_toBottomOf="@+id/health_care2" />
 
     <TextView
         android:id="@+id/healthcare_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="13dp"
-        android:text="Health Care"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/health_care"
         android:textColor="#ffffff"
         android:textSize="15dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/health_care"
-        app:layout_constraintTop_toBottomOf="@+id/health_care" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/home_items_textview"
+        app:layout_constraintTop_toBottomOf="@+id/health_care2" />
 
     <TextView
         android:id="@+id/eduaction_textview"
@@ -120,12 +123,12 @@
         android:id="@+id/home_items_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
         android:layout_marginTop="28dp"
         android:text="Home items"
         android:textColor="#ffffff"
         android:textSize="15dp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/home_items"
         app:layout_constraintStart_toStartOf="@+id/home_items"
         app:layout_constraintTop_toBottomOf="@+id/home_items" />
 
@@ -136,17 +139,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="Food"
         android:textColor="#ffffff"
         android:textSize="15dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/health_care"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toEndOf="@+id/eduaction_textview"
-        app:layout_constraintTop_toBottomOf="@+id/food"
-        app:layout_constraintVertical_bias="0.367" />
+        app:layout_constraintTop_toBottomOf="@+id/food" />
 
     <TextView
         android:id="@+id/select_category"
@@ -180,7 +180,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/CrisistextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -197,6 +197,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/crisis_help"
         app:layout_constraintVertical_bias="0.215" />
+
+    <TextView
+        android:id="@+id/SocialtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Social Service"
+        android:textColor="#F8F8F8"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toEndOf="@+id/CrisistextView"
+        app:layout_constraintTop_toBottomOf="@+id/social_servicebtn"
+        app:layout_constraintVertical_bias="0.219" />
 
 
 </android.support.constraint.ConstraintLayout>

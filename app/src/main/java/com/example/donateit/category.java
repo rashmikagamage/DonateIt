@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class category extends AppCompatActivity {
 
-    Button crisis;
+    Button crisis, SocialService;
 
 
     @Override
@@ -17,6 +17,7 @@ public class category extends AppCompatActivity {
         setContentView(R.layout.activity_category);
 
         crisis = findViewById(R.id.crisis_help);
+        SocialService = findViewById(R.id.social_servicebtn);
 
         crisis.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,10 +27,17 @@ public class category extends AppCompatActivity {
             }
         });
 
+        SocialService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent SocialService;
+                SocialService = new Intent(getApplicationContext(), SocialService.class);
+                startActivity(SocialService);
+            }
+        });
+
     }
 
-    public void goToSocialSer(View view){
-        Intent intent = new Intent(this, SocialService.class);
-        startActivity(intent);
+
     }
-}
+
