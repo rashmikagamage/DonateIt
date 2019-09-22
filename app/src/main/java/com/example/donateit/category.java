@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class category extends AppCompatActivity {
 
     Button crisis, SocialService;
@@ -62,7 +64,10 @@ public class category extends AppCompatActivity {
         int id = item.getItemId();
         if(id==R.id.signout){
 
-            Toast.makeText(getApplicationContext(),"signpit",Toast.LENGTH_SHORT).show();
+            FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+            firebaseAuth.signOut();
+            Intent signout = new Intent(getApplicationContext(),MainActivity.class);
+            Toast.makeText(getApplicationContext(),"Sign Out Succesfully ",Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);
