@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toolbar;
 
 public class category extends AppCompatActivity {
 
@@ -16,8 +17,11 @@ public class category extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
+
+
         crisis = findViewById(R.id.crisis_help);
         SocialService = findViewById(R.id.social_servicebtn);
+
 
         crisis.setOnClickListener(new View.OnClickListener() {
             @Override

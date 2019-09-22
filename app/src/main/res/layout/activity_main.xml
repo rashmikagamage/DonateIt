@@ -11,6 +11,10 @@
     android:backgroundTintMode="multiply"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
     <VideoView
         android:id="@+id/videoView"
         android:layout_width="0dp"
