@@ -3,14 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/background"
     android:layout_height="match_parent"
+    android:background="#9BF1E9"
     tools:context=".Intro">
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="385dp"
+        android:layout_height="202dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="596dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lendhand" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="333dp"
-        android:layout_height="579dp"
+        android:layout_width="388dp"
+        android:layout_height="500dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -18,24 +31,23 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="84dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:typeface="monospace"
-        android:text="Introduction to Social Work  Social Work is both an academic discipline and profession that concerns itself with helping individuals, families, groups and communities enhance their social functioning and overall well-being.
-The primary mission of the social work profession is to “enhance human well¬being and help meet the basic human needs of all people, with particular attention to the needs and empowerment of people who are vulnerable, oppressed, and living in poverty”This profession is committed to the pursuit of social justice to enhance the quality of life, and the development of individuals, groups, families, and communities to its full potential.
-The Global definition of social work
-The social work profession
-Promotes social change, problem-solving in human relationships, and the empowerment and liberation of people to enhance wellbeing.
-Utilizing theories of human behavior and social system social work intervenes at the points where people interact with their environments.
+        android:fontFamily="sans-serif-black"
+        android:text="Introduction to Social Work  Social Work is both an academic discipline and profession that concerns itself with helping individuals, families, groups and communities enhance their social functioning and overall well-being.\n\n\n
+The primary mission of the social work profession is to “enhance human well¬being and help meet the basic human needs of all people, with particular attention to the needs and empowerment of people who are vulnerable, oppressed, and living in poverty”This profession is committed to the pursuit of social justice to enhance the quality of life, and the development of individuals, groups, families, and communities to its full potential.\n\n\n
+The Global definition of social work The social work profession Promotes social change, problem-solving in human relationships, and the empowerment and liberation of people to enhance well being.\n\n\n
+Utilizing theories of human behavior and social system social work intervenes at the points where people interact with their environments.\n
 Principles of human rights and social justice are fundamental to social work."
         android:textSize="14sp"
+        android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.258" />
 
     <EditText
         android:id="@+id/editText3"
@@ -50,9 +62,9 @@ Principles of human rights and social justice are fundamental to social work."
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Introduction to Social Service"
+        android:typeface="serif"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        android:typeface="serif"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

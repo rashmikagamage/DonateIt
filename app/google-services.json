@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "162056764231",
+    "firebase_url": "https://donateit-5a685.firebaseio.com",
+    "project_id": "donateit-5a685",
+    "storage_bucket": "donateit-5a685.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162056764231:android:4fa524624c47f98c242a62",
+        "android_client_info": {
+          "package_name": "com.example.donateit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162056764231-0ak1rsj1gdkiqjbo3ig0pgpusa31ause.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.donateit",
+            "certificate_hash": "bca15779fd1e6a7917e589f41638d9ad71512783"
+          }
+        },
+        {
+          "client_id": "162056764231-jhoocuh7ottooevaoemv6rrb883ei7ki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiovGpdQgII9O6HU5IgBwladcgmt-8eyA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "162056764231-jhoocuh7ottooevaoemv6rrb883ei7ki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
