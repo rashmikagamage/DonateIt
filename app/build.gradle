@@ -43,3 +43,7 @@ dependencies {
 dependencies {
     implementation 'com.google.firebase:firebase-auth:16.0.5'
 }
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:+'
+}

@@ -18,7 +18,10 @@
     <string name="EducationHelp">Education Help</string>
     <string name="goaheadsavealife">Go ahead , Save a life</string>
     <string name="retypepassword">Re Type Password</string>
-    <string name="howtohelp">Please select the donation type </string>
+    <string name="howtohelp">Donation type </string>
+    <string name="howcanhelp">Describe how you can help them </string>
+    <string name="location">Location</string>
+
 
     <string-array name="categories">
 
@@ -33,7 +36,10 @@
 
         <item>Food and water </item>
         <item>Dry Food</item>
-        <item>equipments></item>
+        <item>equipments</item>
+        <item>Clothes</item>
+
+
     </string-array>
 
     <string-array name="EnterOrgans">

@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class crisis extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     AnimationDrawable crysisAnimation;
-    EditText message;
+    EditText message,contactNo,location;
     Spinner spinner;
     DatabaseReference db;
     CrysisHelp crysisHelp;
@@ -29,6 +29,7 @@ public class crisis extends AppCompatActivity implements AdapterView.OnItemSelec
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     String currentUserEmail;
+    static int ID=0;
 
 
     @Override
@@ -44,6 +45,9 @@ public class crisis extends AppCompatActivity implements AdapterView.OnItemSelec
         spinner = findViewById(R.id.helptype);
         message = findViewById(R.id.crysis_message);
         sendthem =findViewById(R.id.send_them);
+        location = findViewById(R.id.location_crysis);
+        contactNo = findViewById(R.id.phoneNo_Crysis);
+
         crysisHelp = new CrysisHelp();
         firebaseAuth =FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
@@ -64,9 +68,13 @@ public class crisis extends AppCompatActivity implements AdapterView.OnItemSelec
 
                 crysisHelp.setHelpType(text);
                 crysisHelp.setMessage(message.getText().toString());
+                crysisHelp.setContactNo(contactNo.getText().toString());
+                crysisHelp.setLocation(location.getText().toString());
+                String sid = Integer.toString(ID);
                 crysisHelp.setEmail(currentUserEmail);
 
-                db.child(changeEmail(currentUserEmail)).setValue(crysisHelp);
+                db.child(sid).setValue(crysisHelp);
+                ID=ID+1;
                 Toast.makeText(getApplicationContext(),"Thank you!!",Toast.LENGTH_SHORT).show();
 
             }
