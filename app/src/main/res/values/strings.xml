@@ -18,6 +18,7 @@
     <string name="EducationHelp">Education Help</string>
     <string name="goaheadsavealife">Go ahead , Save a life</string>
     <string name="retypepassword">Re Type Password</string>
+    <string name="howtohelp">Please select the donation type </string>
 
     <string-array name="categories">
 
@@ -26,6 +27,13 @@
         <item>Home items</item>
         <item>Education</item>
         <item>Blood and Organ</item>
+    </string-array>
+
+    <string-array name="helptype">
+
+        <item>Food and water </item>
+        <item>Dry Food</item>
+        <item>equipments></item>
     </string-array>
 
     <string-array name="EnterOrgans">
@@ -51,5 +59,8 @@
     </string-array>
     <string name="title_activity_selection">selection</string>
     <string name="health_care">Health Care</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

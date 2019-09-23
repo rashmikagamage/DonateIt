@@ -109,7 +109,7 @@ public class singnup extends AppCompatActivity {
                                    @Override
                                    public void onComplete(@NonNull Task<AuthResult> task) {
                                        if (task.isSuccessful()) {
-                                           db.child(changeEmail(user.getEmail())).setValue(user);
+                                           db.child(changeEmail(user.getEmail())).setValue(user);  //save user details
                                            Toast.makeText(getApplicationContext(), "Registration successful!", Toast.LENGTH_LONG).show();
                                            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                                            startActivity(intent);
@@ -166,9 +166,6 @@ public class singnup extends AppCompatActivity {
            String newEmail1 =  email.replace('@','0');
            String newEmail2 = newEmail1.replace('.','0');
            return newEmail2;
-
-
-
 
     }
 }

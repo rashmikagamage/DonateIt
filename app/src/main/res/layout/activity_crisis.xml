@@ -8,13 +8,12 @@
     tools:context=".crisis">
 
 
-
     <TextView
         android:id="@+id/textView5"
         android:layout_width="222dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:text="They need your Support"
         android:textColor="@color/backgroundcolor"
@@ -46,7 +45,7 @@
         android:layout_width="339dp"
         android:layout_height="54dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:text="How can you help them or what you can offer them"
         android:textAlignment="center"
@@ -57,11 +56,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/crysis_text"
-        android:layout_width="248dp"
-        android:layout_height="125dp"
+        android:id="@+id/crysis_message"
+        android:layout_width="329dp"
+        android:layout_height="64dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/border"
         android:ems="10"
@@ -70,7 +69,6 @@
         android:inputType="textMultiLine"
         android:minLines="5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -87,31 +85,69 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/send_them"
         android:layout_width="231dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/buttonshape"
         android:text="send them"
         android:textColor="@color/backgroundcolor"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/crysis_text" />
+        app:layout_constraintTop_toBottomOf="@+id/crysis_message" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="366dp"
-        android:layout_height="270dp"
+        android:layout_width="364dp"
+        android:layout_height="226dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:srcCompat="@drawable/lendhand" />
+        app:srcCompat="@drawable/lendhand"
+        tools:layout_editor_absoluteY="618dp" />
+
+    <Spinner
+        android:id="@+id/helptype"
+        android:layout_width="254dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="264dp"
+        android:entries="@array/helptype"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="224dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/howtohelp"
+        app:layout_constraintBottom_toTopOf="@+id/helptype"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crysis_message"
+        app:layout_constraintVertical_bias="0.814" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
 
 
 </android.support.constraint.ConstraintLayout>
