@@ -54,6 +54,7 @@ public class crisis extends AppCompatActivity implements AdapterView.OnItemSelec
         currentUserEmail = firebaseUser.getEmail();
 
         //Spinner
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.helptype, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

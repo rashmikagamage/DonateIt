@@ -62,14 +62,19 @@ public class category extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-        if(id==R.id.signout){
+        if(id==R.id.signout) {
 
             FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
             firebaseAuth.signOut();
-            Intent signout = new Intent(getApplicationContext(),MainActivity.class);
-            Toast.makeText(getApplicationContext(),"Sign Out Succesfully ",Toast.LENGTH_SHORT).show();
+            Intent signout = new Intent(getApplicationContext(), MainActivity.class);
+            Toast.makeText(getApplicationContext(), "Sign Out Succesfully ", Toast.LENGTH_SHORT).show();
+            startActivity(signout);
         }
+        else if(id == R.id.editProfile){
 
+            Intent update = new Intent(getApplicationContext(), EditUser.class);
+            startActivity(update);
+        }
         return super.onOptionsItemSelected(item);
     }
 }

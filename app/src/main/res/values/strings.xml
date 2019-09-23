@@ -21,6 +21,7 @@
     <string name="howtohelp">Donation type </string>
     <string name="howcanhelp">Describe how you can help them </string>
     <string name="location">Location</string>
+    <string name="edituser">Update</string>
 
 
     <string-array name="categories">

@@ -2,8 +2,6 @@ package com.example.donateit;
 
 import android.content.Intent;
 
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.widget.VideoView;
 
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -45,7 +42,7 @@ public class singnup extends AppCompatActivity {
         password1 = findViewById(R.id.password1);
         password2 = findViewById(R.id.password2);
         location = findViewById(R.id.location);
-        phoneNumber = findViewById(R.id.contactnumber);
+        phoneNumber = findViewById(R.id.contactNo_edituser);
 
         user = new User();
 
