@@ -15,7 +15,7 @@
         <activity android:name=".testgit" />
         <activity android:name=".forget_password" />
         <activity android:name=".selection" />
-        <activity android:name=".viewmain" />
+        <activity android:name=".crysisView" />
         <activity android:name=".crisis" />
         <activity android:name=".category">
             <intent-filter>

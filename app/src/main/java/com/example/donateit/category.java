@@ -60,6 +60,8 @@ public class category extends AppCompatActivity {
 
     }
 
+    // When tool bar selected this  method is called
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -68,18 +70,17 @@ public class category extends AppCompatActivity {
 
             signout();
 
-
-
         }
         else if(id == R.id.editProfile){
 
-            Intent update = new Intent(getApplicationContext(), EditUser.class);
+            Intent update = new Intent(getApplicationContext(), EditUser.class);      //User will ne redirect to edit Pahe
             startActivity(update);
         }
         return super.onOptionsItemSelected(item);
     }
 
 
+    //Sign out methhod for Signouting
 
     public void signout(){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);

@@ -32,7 +32,7 @@ public class selection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent donee = new Intent(getApplicationContext(),viewmain.class);
+                Intent donee = new Intent(getApplicationContext(), crysisView.class);
                 startActivity(donee);
             }
         });
