@@ -1,6 +1,8 @@
 package com.example.donateit;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -64,11 +66,10 @@ public class category extends AppCompatActivity {
         int id = item.getItemId();
         if(id==R.id.signout) {
 
-            FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-            firebaseAuth.signOut();
-            Intent signout = new Intent(getApplicationContext(), MainActivity.class);
-            Toast.makeText(getApplicationContext(), "Sign Out Succesfully ", Toast.LENGTH_SHORT).show();
-            startActivity(signout);
+            signout();
+
+
+
         }
         else if(id == R.id.editProfile){
 
@@ -76,6 +77,36 @@ public class category extends AppCompatActivity {
             startActivity(update);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+
+    public void signout(){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setMessage("Are you sure?");
+                alertDialogBuilder.setPositiveButton("yes",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface arg0, int arg1) {
+
+                                FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+                                firebaseAuth.signOut();
+                                Intent signout = new Intent(getApplicationContext(), MainActivity.class);
+                                Toast.makeText(getApplicationContext(), "Sign Out Succesfully ", Toast.LENGTH_SHORT).show();
+                                startActivity(signout);
+
+                            }
+                        });
+
+        alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+               dialog.cancel();
+            }
+        });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
 }
 

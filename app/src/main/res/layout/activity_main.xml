@@ -17,23 +17,22 @@
 
     <VideoView
         android:id="@+id/videoView"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/email_signin"
-        android:layout_width="0dp"
-        android:layout_height="53dp"
+        android:layout_width="332dp"
+        android:layout_height="65dp"
 
         android:layout_marginStart="8dp"
-        android:layout_marginTop="240dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_email"
         android:ems="10"
@@ -41,19 +40,19 @@
         android:inputType="textEmailAddress"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205"
+        app:layout_constraintBottom_toBottomOf="@+id/videoView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/videoView"
+        app:layout_constraintVertical_bias="0.486"
         tools:layout_conversion_wrapHeight="105"
         tools:layout_conversion_wrapWidth="656" />
 
     <EditText
         android:id="@+id/password_signin"
-        android:layout_width="310dp"
-        android:layout_height="56dp"
+        android:layout_width="325dp"
+        android:layout_height="72dp"
 
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -66,10 +65,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/videoView"
-        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59"
+        app:layout_constraintVertical_bias="0.594"
         tools:layout_conversion_wrapHeight="105"
         tools:layout_conversion_wrapWidth="63" />
 
@@ -81,7 +80,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="Not a Member?"
+        android:textColor="#001a34"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/singup_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.209"
@@ -115,6 +116,7 @@
         android:background="@null"
         android:text="@string/signup"
         android:textSize="18dp"
+        android:textColor="#001a34"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.646"
@@ -129,7 +131,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/forgotopassword"
+        android:textColor="#001a34"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/forgetPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"
@@ -146,6 +150,7 @@
         android:background="@null"
         android:text="click here"
         android:textSize="18dp"
+        android:textColor="#001a34"
         app:layout_constraintBottom_toBottomOf="@+id/videoView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.77"
@@ -179,21 +184,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="205dp" />
+        app:layout_constraintGuide_begin="-162dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="286dp" />
+        app:layout_constraintGuide_begin="284dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="33dp" />
+        app:layout_constraintGuide_begin="60dp" />
 
 
 </android.support.constraint.ConstraintLayout>
