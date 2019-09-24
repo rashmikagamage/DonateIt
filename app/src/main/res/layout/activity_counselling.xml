@@ -28,14 +28,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-black"
-        android:text="School counselors are generally trained in educational psychology,work tends to be short-termed.\n\n
-        Marriage counselors receive graduate training from several disciplines, including social work.\n Rehabilitation counselors are usually t
-        rained in educational psychology and utilizes testing.\n\nThe social worker tends to be more intensive, works with the student longer, focuses on family
-constellation, and utilizes community resources.\n\n Marriage counseling is one particular emphasis in social work practice.
-The social worker usually assists with the emotional and/or family problems, has fewer cases,and works with clients more intensively.\n\n Social work is becoming
-more important because thousands of persons are benefiting from its services and are telling their friends and associates who have problems of its many values and services.\n\n
-A prominent American made a statement that what the United States needs most of all to improve its foreign policy and relations is to have trained
-social workers as State Department attaches where each of the official government representative works and lives.\n\n Press the below button for 24/7 online counselling :)"
+        android:text="@string/counselling"
+        android:textColor="#009688"
         android:typeface="monospace"
         app:layout_constraintBottom_toTopOf="@+id/imageView11"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +46,8 @@ social workers as State Department attaches where each of the official governmen
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Counselling and Social Work"
+        android:text="@string/counsel_title"
+        android:textColor="#0C140D"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -72,7 +67,9 @@ social workers as State Department attaches where each of the official governmen
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:layout_constraintVertical_bias="0.0"></LinearLayout>
+        app:layout_constraintVertical_bias="0.0">
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/button5"
@@ -80,10 +77,11 @@ social workers as State Department attaches where each of the official governmen
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="#009688"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="browser2"
-        android:text="Need someone to talk to?"
+        android:text="@string/counselling_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
