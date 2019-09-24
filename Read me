@@ -2,4 +2,6 @@ Donate Food - When we click the Food In the category we will redirect to Donate 
 DonateFoodItem - when Click on this we have to fill some data in the interface and have to submit.
 DonateFoodView - In this interface we can view all the items that we entered in the previos.
 DonateFoodEdit - In here we can edit or delete any data set that we entered to the firebase
-
+Health care  In here there are 2 categories thatwe can select. 
+Donate Blood- here we haveto fill some data to add to the system.
+Donate Organ - Here we have to add 
