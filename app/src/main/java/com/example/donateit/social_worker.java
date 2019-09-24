@@ -5,17 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class Intro extends AppCompatActivity {
+public class social_worker extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro);
+        setContentView(R.layout.activity_social_worker);
     }
-    public void goToSocialWorker(View view){
-        Intent intent = new Intent(this, social_worker.class);
+
+    public void goToQuiz(View view) {
+        Intent intent = new Intent(this, QuizActivity.class);
         startActivity(intent);
     }
 }
-
-

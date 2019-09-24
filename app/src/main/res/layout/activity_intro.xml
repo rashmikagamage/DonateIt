@@ -35,11 +35,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-black"
-        android:text="Introduction to Social Work  Social Work is both an academic discipline and profession that concerns itself with helping individuals, families, groups and communities enhance their social functioning and overall well-being.\n\n\n
-The primary mission of the social work profession is to “enhance human well¬being and help meet the basic human needs of all people, with particular attention to the needs and empowerment of people who are vulnerable, oppressed, and living in poverty”This profession is committed to the pursuit of social justice to enhance the quality of life, and the development of individuals, groups, families, and communities to its full potential.\n\n\n
-The Global definition of social work The social work profession Promotes social change, problem-solving in human relationships, and the empowerment and liberation of people to enhance well being.\n\n\n
-Utilizing theories of human behavior and social system social work intervenes at the points where people interact with their environments.\n
-Principles of human rights and social justice are fundamental to social work."
+        android:text="@string/intropara"
+        android:textColor="#009688"
         android:textSize="14sp"
         android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,18 +51,29 @@ Principles of human rights and social justice are fundamental to social work."
         android:layout_width="329dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Introduction to Social Service"
+        android:text="@string/introsocialtitle"
+        android:textColor="#0C140D"
         android:typeface="serif"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="203dp"
+        android:layout_height="61dp"
+        android:onClick="goToSocialWorker"
+        android:text="@string/social_btn"
+        android:background="#009688"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="@+id/imageView10"
+        app:layout_constraintTop_toTopOf="@+id/imageView10"
+        app:layout_constraintVertical_bias="0.527" />
 
 </android.support.constraint.ConstraintLayout>

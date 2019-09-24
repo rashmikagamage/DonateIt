@@ -22,7 +22,53 @@
     <string name="howcanhelp">Describe how you can help them </string>
     <string name="location">Location</string>
     <string name="edituser">Update</string>
+    <string name="intropara">Social Work is both an academic discipline and profession that concerns itself with helping individuals, families, groups and communities enhance their social functioning and overall well-being.\n\n\n
+The primary mission of the social work profession is to “enhance human well¬being and help meet the basic human needs of all people, with particular attention to the needs and empowerment of people who are vulnerable, oppressed, and living in poverty”This profession is committed to the pursuit of social justice to enhance the quality of life, and the development of individuals, groups, families, and communities to its full potential.\n\n\n
+The Global definition of social work The social work profession Promotes social change, problem-solving in human relationships, and the empowerment and liberation of people to enhance well being.\n\n\n
+Utilizing theories of human behavior and social system social work intervenes at the points where people interact with their environments.\n
+Principles of human rights and social justice are fundamental to social work.</string>
+    <string name="how_to_para">Social workers are trained with proper education, experience, and dedication to help individuals whenever and wherever they need it.\n\n
+It takes a bachelors, masters, or doctoral social work degree — with a minimum number of hours in supervised fieldwork — to become a social worker 
+The BSW is a Bachelor’s of Social Work degree.\n\n\n This is the only bachelor’s level human service degree whose educational programs are accredited by a national body, which is the Council on Social Work Education (CSWE).\n\n\n
+The CSWE accreditation process insures that the programs meet national standards on all levels.\n\n
+Through this process, social work students receive appropriate education and training to better serve our clients.\n\n Press the button for more details :)</string>
+    <string name="counselling">School counselors are generally trained in educational psychology,work tends to be short-termed.\n\n
+        Marriage counselors receive graduate training from several disciplines, including social work.\n Rehabilitation counselors are usually t
+        rained in educational psychology and utilizes testing.\n\nThe social worker tends to be more intensive, works with the student longer, focuses on family
+constellation, and utilizes community resources.\n\n Marriage counseling is one particular emphasis in social work practice.
+The social worker usually assists with the emotional and/or family problems, has fewer cases,and works with clients more intensively.\n\n Social work is becoming
+more important because thousands of persons are benefiting from its services and are telling their friends and associates who have problems of its many values and services.\n\n
+A prominent American made a statement that what the United States needs most of all to improve its foreign policy and relations is to have trained
+social workers as State Department attaches where each of the official government representative works and lives.\n\n Press the below button for 24/7 online counselling :)</string>
+    <string name="social_serv_btn">Social Services</string>
+    <string name="howtotitle">How to become a Social Worker</string>
+    <string name="introsocialtitle">Introduction to Social Service</string>
+    <string name="counselling_btn">Need someone to talk to?</string>
+    <string name="counsel_title">Counselling and Social Work</string>
+    <string name="social_btn">What does a Social Worker do?</string>
+    <string name="worker_para">There are two main types of social workers:\n\n direct-service social workers,
+        who help people solve and cope with problems in their everyday lives, and clinical social workers, who diagnose and treat mental,
+        behavioural, and emotional issues.\n A social worker can work in a variety of settings, including mental health clinics, schools,
+        hospitals, and private practices.\n Direct-service social workers typically do the following:\n
+       &#8226; <br /> Identify people who need help\n
+&#8226; <br />Assess clients’ needs, situations, strengths, and support networks to determine their goals\n
+&#8226; <br />Develop plans to improve their clients’ well-being\n
+&#8226; <br />Help clients adjust to changes and challenges in their lives, such as illness, divorce, or unemployment\n
+&#8226; <br />Research and refer clients to community resources, such as food stamps, child care, and healthcare\n
+&#8226; <br />Help clients work with government agencies to apply for and receive benefits such as Medicare\n
+&#8226; <br />Respond to crisis situations, such as natural disasters or child abuse\n
+&#8226; <br />Advocate for and help clients get resources that would improve their well-being\n\n
+        Will you make a good social worker? Find yourself :)
+</string>
+    <string name="quiz">TAKE PRACTISE TEST</string>
 
+
+    <string name="title_activity_selection">selection</string>
+
+    <string name="health_care">Health Care</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quizone">What made you go into social work?</string>
 
     <string-array name="categories">
 
@@ -32,7 +78,6 @@
         <item>Education</item>
         <item>Blood and Organ</item>
     </string-array>
-
     <string-array name="helptype">
 
         <item>Food and water </item>
@@ -42,7 +87,6 @@
 
 
     </string-array>
-
     <string-array name="EnterOrgans">
 
         <item>Kidney</item>
@@ -52,6 +96,7 @@
         <item>Pancreas</item>
     </string-array>
 
+    <!-- TODO: Remove or change this placeholder text -->
     <string-array name="BloodType">
 
         <item>O+</item>
@@ -64,10 +109,5 @@
         <item>AB-</item>
 
     </string-array>
-    <string name="title_activity_selection">selection</string>
-    <string name="health_care">Health Care</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

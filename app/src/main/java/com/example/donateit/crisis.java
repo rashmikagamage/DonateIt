@@ -1,5 +1,6 @@
 package com.example.donateit;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,6 +30,7 @@ public class crisis extends AppCompatActivity implements AdapterView.OnItemSelec
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     String currentUserEmail;
+    Button viewhelp;
     static int ID=0;
 
 
@@ -47,6 +49,7 @@ public class crisis extends AppCompatActivity implements AdapterView.OnItemSelec
         sendthem =findViewById(R.id.send_them);
         location = findViewById(R.id.location_crysis);
         contactNo = findViewById(R.id.phoneNo_Crysis);
+        viewhelp = findViewById(R.id.viewhelp);
 
         crysisHelp = new CrysisHelp();
         firebaseAuth =FirebaseAuth.getInstance();
@@ -81,7 +84,20 @@ public class crisis extends AppCompatActivity implements AdapterView.OnItemSelec
             }
         });
 
+
+        viewhelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(),crysisView.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
+
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
