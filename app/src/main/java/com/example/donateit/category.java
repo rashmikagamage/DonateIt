@@ -44,7 +44,7 @@ public class category extends AppCompatActivity {
         crisis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent crisis = new Intent(getApplicationContext(), com.example.donateit.crisis.class);
+                Intent crisis = new Intent(getApplicationContext(), crysisSelection.class);
                 startActivity(crisis);
             }
         });

@@ -12,8 +12,6 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
-
-
     <Button
         android:id="@+id/health_care2"
         android:layout_width="115dp"

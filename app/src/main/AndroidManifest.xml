@@ -11,11 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".EditUser"></activity>
+        <activity
+            android:name=".test"
+            android:label="@string/title_activity_test"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".EditUser" />
         <activity android:name=".testgit" />
         <activity android:name=".forget_password" />
         <activity android:name=".selection" />
         <activity android:name=".crysisView" />
+        <activity android:name=".crysisSelection" />
         <activity android:name=".crisis" />
         <activity android:name=".category">
             <intent-filter>
@@ -25,7 +30,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".singnup" />
-        <activity android:name=".flashScreen" />
+        <activity android:name=".flashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

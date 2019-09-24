@@ -46,10 +46,10 @@
 
     <ListView
         android:id="@+id/list_view_messages"
-        android:layout_width="368dp"
-        android:layout_height="537dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="176dp"
+        android:layout_width="392dp"
+        android:layout_height="543dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="172dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
