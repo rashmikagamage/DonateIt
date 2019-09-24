@@ -11,7 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".EditUser"></activity>
+        <activity android:name=".addVolunteer"></activity>
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".social_worker" />
+        <activity android:name=".EditUser" />
         <activity android:name=".testgit" />
         <activity android:name=".forget_password" />
         <activity android:name=".selection" />

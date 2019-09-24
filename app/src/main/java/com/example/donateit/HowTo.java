@@ -18,6 +18,10 @@ public class HowTo extends AppCompatActivity {
         Intent browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.socialservices.gov.lk/web/index.php?lang=en"));
         startActivity(browserIntent);
     }
+    public void goToAddVolunteer( View view){
+        Intent intent = new Intent(this,addVolunteer.class);
+        startActivity(intent);
+    }
 
 
 }

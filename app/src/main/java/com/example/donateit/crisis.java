@@ -1,9 +1,11 @@
 package com.example.donateit;
 
 import android.content.Intent;
+import android.graphics.ColorSpace;
 import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -95,6 +97,24 @@ public class crisis extends AppCompatActivity implements AdapterView.OnItemSelec
             }
         });
 
+    }
+    @Override
+    protected void onStart(){
+        super.onStart();
+        FirebaseRecyclerAdapter<Model, ViewHolder> firebaseRecyclerAdapter =
+                new FirebaseRecycler<Model, ViewHolder>(
+                        Model.class,
+                        R.layout.row,
+                        ViewHolder.class,
+                        mref
+                ){
+                    @Override
+                    protected void populateViewHolder(ViewHolder viewHolder,Model model, int position){
+                        viewHolder.setDetails(getApplicationContext(), model.getTitle(), model.getDescripction(), model.getImage());
+
+                    }
+                };
+                  mRecycleView.setAdapter(firebaseRecyclerAdapter);
     }
 
 
