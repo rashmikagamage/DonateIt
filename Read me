@@ -5,3 +5,5 @@ DonateFoodEdit - In here we can edit or delete any data set that we entered to t
 Health care  In here there are 2 categories thatwe can select. 
 Donate Blood- here we haveto fill some data to add to the system.
 Donate Organ - Here we have to add 
+Donate BloodView - In this interface we can see all the data which user had entered previously.
+Donate Organ View - In here we can see all the valuable data user has passed.
