@@ -2,8 +2,8 @@ package com.example.donateit;
 
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class crisis extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class Crisis extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     AnimationDrawable crysisAnimation;
     EditText message,contactNo,location;
@@ -41,7 +41,7 @@ public class crisis extends AppCompatActivity implements AdapterView.OnItemSelec
 
         //Animated alert button
 
-        ImageView imageView = (ImageView) findViewById(R.id.imageView2);
+        ImageView imageView = findViewById(R.id.imageView2);
         imageView.setBackgroundResource(R.drawable.animationcrysis);
         crysisAnimation = (AnimationDrawable) imageView.getBackground();
         spinner = findViewById(R.id.helptype);
@@ -89,7 +89,7 @@ public class crisis extends AppCompatActivity implements AdapterView.OnItemSelec
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(),crysisView.class);
+                Intent intent = new Intent(getApplicationContext(), CrisisView.class);
                 startActivity(intent);
 
             }

@@ -1,12 +1,12 @@
 package com.example.donateit;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class selection extends AppCompatActivity {
+public class Selection extends AppCompatActivity {
 
     Button donator,donee;
 
@@ -23,7 +23,7 @@ public class selection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent donator = new Intent(getApplicationContext(),category.class);
+                Intent donator = new Intent(getApplicationContext(), Category.class);
                 startActivity(donator);
             }
         });
@@ -32,7 +32,7 @@ public class selection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent donee = new Intent(getApplicationContext(), crysisView.class);
+                Intent donee = new Intent(getApplicationContext(), CrisisView.class);
                 startActivity(donee);
             }
         });

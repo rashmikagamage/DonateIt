@@ -2,20 +2,23 @@ package com.example.donateit;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class category extends AppCompatActivity {
+public class Category extends AppCompatActivity {
 
     Button crisis, SocialService;
 
@@ -40,11 +43,12 @@ public class category extends AppCompatActivity {
         crisis = findViewById(R.id.crisis_help);
         SocialService = findViewById(R.id.social_servicebtn);
 
+        //Crisis page is called
 
         crisis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent crisis = new Intent(getApplicationContext(), crysisSelection.class);
+                Intent crisis = new Intent(getApplicationContext(), CrysisSelection.class);
                 startActivity(crisis);
             }
         });
@@ -70,14 +74,18 @@ public class category extends AppCompatActivity {
 
             signout();
 
-        }
-        else if(id == R.id.editProfile){
+        } else if (id == R.id.editProfile) {
 
             Intent update = new Intent(getApplicationContext(), EditUser.class);      //User will ne redirect to edit Pahe
             startActivity(update);
+        } else if (id == R.id.delete) {
+
+            deleteUser();
+
         }
         return super.onOptionsItemSelected(item);
     }
+
 
 
     //Sign out methhod for Signouting
@@ -90,6 +98,7 @@ public class category extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface arg0, int arg1) {
 
+                                //Creating objects
                                 FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
                                 firebaseAuth.signOut();
                                 Intent signout = new Intent(getApplicationContext(), MainActivity.class);
@@ -109,5 +118,48 @@ public class category extends AppCompatActivity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
+
+    /*
+     * When user select delete account
+     * this method will be called
+     */
+
+
+    private void deleteUser() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setMessage("Are you sure?");
+        alertDialogBuilder.setPositiveButton("yes",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface arg0, int arg1) {
+
+                        //Creating objects
+
+                        Singnup singnup = new Singnup();
+                        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+                        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+                        String currentUserEmail = firebaseUser.getEmail();
+                        firebaseUser.delete();
+                        DatabaseReference deleteUser = FirebaseDatabase.getInstance().getReference().child("Users").child(singnup.changeEmail(currentUserEmail));
+                        deleteUser.removeValue();
+
+                        Intent delete = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(delete);
+
+                    }
+                });
+
+        alertDialogBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+
+    }
+
 }
 

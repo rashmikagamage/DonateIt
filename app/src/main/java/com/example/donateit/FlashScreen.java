@@ -1,11 +1,11 @@
 package com.example.donateit;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
-public class flashScreen extends AppCompatActivity {
+public class FlashScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ Handler handler;
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(flashScreen.this,MainActivity.class);
+                Intent intent = new Intent(FlashScreen.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }

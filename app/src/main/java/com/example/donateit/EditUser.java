@@ -33,7 +33,7 @@ public class EditUser extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     String currentUserEmail, currentContactNo, currentLocation, currentName, currentPassword;
-    singnup signup;
+    Singnup signup;
     User userUpdate;
 
 
@@ -48,7 +48,7 @@ public class EditUser extends AppCompatActivity {
         location = findViewById(R.id.location_editUser);
         contacNo = findViewById(R.id.contactNo_edituser);
         update = findViewById(R.id.update);
-        signup = new singnup();
+        signup = new Singnup();
         userUpdate = new User();
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();

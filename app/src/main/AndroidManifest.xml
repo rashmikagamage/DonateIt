@@ -14,23 +14,23 @@
         <activity
             android:name=".test"
             android:label="@string/title_activity_test"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".EditUser" />
         <activity android:name=".testgit" />
-        <activity android:name=".forget_password" />
-        <activity android:name=".selection" />
-        <activity android:name=".crysisView" />
-        <activity android:name=".crysisSelection" />
-        <activity android:name=".crisis" />
-        <activity android:name=".category">
+        <activity android:name=".ForgetPassword" />
+        <activity android:name=".Selection" />
+        <activity android:name=".CrisisView" />
+        <activity android:name=".CrysisSelection" />
+        <activity android:name=".Crisis" />
+        <activity android:name=".Category">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".singnup" />
-        <activity android:name=".flashScreen">
+        <activity android:name=".Singnup" />
+        <activity android:name=".FlashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

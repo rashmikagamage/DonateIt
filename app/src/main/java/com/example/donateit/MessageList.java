@@ -9,12 +9,12 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class messageList extends ArrayAdapter<CrysisHelp> {
+public class MessageList extends ArrayAdapter<CrysisHelp> {
 
     private Activity context;
     private List<CrysisHelp> messageList;
 
-    public messageList(Activity context, List<CrysisHelp> messageList) {
+    public MessageList(Activity context, List<CrysisHelp> messageList) {
 
         super(context, R.layout.list_layout, messageList);
         this.context = context;
