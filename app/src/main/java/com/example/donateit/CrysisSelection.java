@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class crysisSelection extends AppCompatActivity {
+public class CrysisSelection extends AppCompatActivity {
 
     Button sendHelp, getHelp; //Button objects
 
@@ -25,7 +25,7 @@ public class crysisSelection extends AppCompatActivity {
         sendHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), crisis.class);
+                Intent intent = new Intent(getApplicationContext(), Crisis.class);
                 startActivity(intent);
             }
         });
@@ -33,7 +33,7 @@ public class crysisSelection extends AppCompatActivity {
         getHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), crysisView.class);
+                Intent intent = new Intent(getApplicationContext(), CrisisView.class);
                 startActivity(intent);
             }
         });
