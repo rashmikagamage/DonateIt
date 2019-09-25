@@ -16,6 +16,7 @@ public class Intro extends AppCompatActivity {
         Intent intent = new Intent(this, social_worker.class);
         startActivity(intent);
     }
+
 }
 
 

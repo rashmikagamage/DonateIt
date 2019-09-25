@@ -7,6 +7,8 @@
     <string name="notamember">Not a member yet?</string>
     <string name="signup">SignUp</string>
     <string name="login">Login</string>
+    <string name="Open">open</string>
+    <string name="Close">close</string>
     <string name="forgotopassword">Forgot Password?</string>
     <string name="clickhere">Click Here</string>
     <string name="welcome2">"Thank you for being Awesome"</string>
@@ -21,6 +23,7 @@
     <string name="howtohelp">Donation type </string>
     <string name="howcanhelp">Describe how you can help them </string>
     <string name="location">Location</string>
+    <string name="gotovolunteer">Add yourself to volunteer</string>
     <string name="edituser">Update</string>
     <string name="intropara">Social Work is both an academic discipline and profession that concerns itself with helping individuals, families, groups and communities enhance their social functioning and overall well-being.\n\n\n
 The primary mission of the social work profession is to “enhance human well¬being and help meet the basic human needs of all people, with particular attention to the needs and empowerment of people who are vulnerable, oppressed, and living in poverty”This profession is committed to the pursuit of social justice to enhance the quality of life, and the development of individuals, groups, families, and communities to its full potential.\n\n\n

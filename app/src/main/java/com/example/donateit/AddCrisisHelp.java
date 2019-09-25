@@ -1,9 +1,14 @@
 package com.example.donateit;
 
 import android.content.Intent;
+import android.graphics.ColorSpace;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+<<<<<<< HEAD:app/src/main/java/com/example/donateit/crisis.java
+import android.support.v7.widget.RecyclerView;
+=======
 import android.support.v7.app.AppCompatActivity;
+>>>>>>> 6b9bdf77e3ceb3227ac1249077471611fab6f5c4:app/src/main/java/com/example/donateit/AddCrisisHelp.java
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -18,7 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Crisis extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class AddCrisisHelp extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     AnimationDrawable crysisAnimation;
     EditText message,contactNo,location;
@@ -37,7 +42,7 @@ public class Crisis extends AppCompatActivity implements AdapterView.OnItemSelec
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crisis);
+        setContentView(R.layout.add_crisis_help);
 
         //Animated alert button
 
@@ -49,7 +54,6 @@ public class Crisis extends AppCompatActivity implements AdapterView.OnItemSelec
         sendthem =findViewById(R.id.send_them);
         location = findViewById(R.id.location_crysis);
         contactNo = findViewById(R.id.phoneNo_Crysis);
-        viewhelp = findViewById(R.id.viewhelp);
 
         crysisHelp = new CrysisHelp();
         firebaseAuth =FirebaseAuth.getInstance();
@@ -80,6 +84,9 @@ public class Crisis extends AppCompatActivity implements AdapterView.OnItemSelec
                 db.child(sid).setValue(crysisHelp);
                 ID=ID+1;
                 Toast.makeText(getApplicationContext(),"Thank you!!",Toast.LENGTH_SHORT).show();
+                message.setText("");
+                location.setText("");
+                contactNo.setText("");
 
             }
         });
@@ -95,6 +102,24 @@ public class Crisis extends AppCompatActivity implements AdapterView.OnItemSelec
             }
         });
 
+    }
+    @Override
+    protected void onStart(){
+        super.onStart();
+        FirebaseRecyclerAdapter<Model, ViewHolder> firebaseRecyclerAdapter =
+                new FirebaseRecycler<Model, ViewHolder>(
+                        Model.class,
+                        R.layout.row,
+                        ViewHolder.class,
+                        mref
+                ){
+                    @Override
+                    protected void populateViewHolder(ViewHolder viewHolder,Model model, int position){
+                        viewHolder.setDetails(getApplicationContext(), model.getTitle(), model.getDescripction(), model.getImage());
+
+                    }
+                };
+                  mRecycleView.setAdapter(firebaseRecyclerAdapter);
     }
 
 

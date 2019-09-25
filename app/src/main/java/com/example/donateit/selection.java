@@ -8,12 +8,16 @@ import android.widget.Button;
 
 public class Selection extends AppCompatActivity {
 
-    Button donator,donee;
+    private Button donator, donee;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection2);
+
+        /* ********************************* HIDING ACTION BAR ***************************************************/
+
+        getSupportActionBar().hide();
 
         donator = findViewById(R.id.donator);
         donee = findViewById(R.id.donee);
@@ -23,7 +27,7 @@ public class Selection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent donator = new Intent(getApplicationContext(), Category.class);
+                Intent donator = new Intent(getApplicationContext(), AddCrisisHelp.class);
                 startActivity(donator);
             }
         });

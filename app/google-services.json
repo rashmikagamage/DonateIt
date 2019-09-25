@@ -8,12 +8,57 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:162056764231:android:8034a07be58ab0b3242a62",
+        "android_client_info": {
+          "package_name": "ccsl.com.example.donateit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162056764231-1kjhaks9cguuii56s8053micgns0rmiq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ccsl.com.example.donateit",
+            "certificate_hash": "f5dfc03aa7dc06871278869334d08904a46d1c1c"
+          }
+        },
+        {
+          "client_id": "162056764231-jhoocuh7ottooevaoemv6rrb883ei7ki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiovGpdQgII9O6HU5IgBwladcgmt-8eyA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "162056764231-jhoocuh7ottooevaoemv6rrb883ei7ki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:162056764231:android:4fa524624c47f98c242a62",
         "android_client_info": {
           "package_name": "com.example.donateit"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "162056764231-1t0s98eel9h28mn9tiu15sl3cn4o3kul.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.donateit",
+            "certificate_hash": "ca45c9424f9a2bb2a8a1b6de46e1ed08a2b14e7c"
+          }
+        },
         {
           "client_id": "162056764231-0ak1rsj1gdkiqjbo3ig0pgpusa31ause.apps.googleusercontent.com",
           "client_type": 1,

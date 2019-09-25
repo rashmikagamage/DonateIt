@@ -16,6 +16,8 @@ import java.util.List;
 
 public class CrisisView extends AppCompatActivity {
 
+    /****************************************** Creating objects *****************************************************************/
+
     ListView messageListView;
     DatabaseReference databaseMessages;
     List<CrysisHelp> messageList;
@@ -25,6 +27,12 @@ public class CrisisView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.crysis_view);
+
+        /* ********************************* HIDING ACTION BAR ***************************************************/
+
+        getSupportActionBar().hide();
+
+        /****************************************** getting refernces  *****************************************************************/
 
         databaseMessages = FirebaseDatabase.getInstance().getReference("CrysisHelp");
         messageListView = findViewById(R.id.list_view_messages);
@@ -46,7 +54,7 @@ public class CrisisView extends AppCompatActivity {
 
                     CrysisHelp crysisHelp = messageSnapshot.getValue(CrysisHelp.class);
 
-                    messageList.add(crysisHelp);
+                    messageList.add(crysisHelp);  //Adding valuse to Arraylist
 
                 }
                 MessageList adapter = new MessageList(CrisisView.this, messageList);
