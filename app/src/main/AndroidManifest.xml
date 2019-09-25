@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
         <activity android:name=".addVolunteer"></activity>
         <activity android:name=".QuizActivity" />
         <activity android:name=".SocialService"/>
@@ -18,28 +19,24 @@
         <activity android:name=".counselling"/>
         <activity android:name=".HowTo"/>
         <activity android:name=".social_worker" />
+        <activity android:name=".CategorySelect" />
         <activity android:name=".EditUser" />
         <activity android:name=".testgit" />
-        <activity android:name=".forget_password" />
-        <activity android:name=".selection" />
-        <activity android:name=".crysisView" />
-        <activity android:name=".crisis" />
-        <activity android:name=".category">
+        <activity android:name=".ForgetPassword" />
+        <activity android:name=".Selection" />
+        <activity android:name=".CrisisView" />
+        <activity android:name=".CrysisSelection" />
+        <activity android:name=".AddCrisisHelp" />
+        <activity android:name=".Singnup" />
+        <activity android:name=".FlashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".singnup" />
-        <activity android:name=".flashScreen" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Login" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

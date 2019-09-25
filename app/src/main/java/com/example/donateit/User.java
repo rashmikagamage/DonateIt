@@ -1,8 +1,8 @@
 package com.example.donateit;
 
-import java.util.Date;
-
 public class User {
+
+    /********************************** DECLARING VARIABLES **********************************************************************/
 
     private String email;
     private String name;

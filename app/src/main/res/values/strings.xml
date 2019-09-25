@@ -7,6 +7,8 @@
     <string name="notamember">Not a member yet?</string>
     <string name="signup">SignUp</string>
     <string name="login">Login</string>
+    <string name="Open">open</string>
+    <string name="Close">close</string>
     <string name="forgotopassword">Forgot Password?</string>
     <string name="clickhere">Click Here</string>
     <string name="welcome2">"Thank you for being Awesome"</string>
@@ -110,5 +112,6 @@ social workers as State Department attaches where each of the official governmen
         <item>AB-</item>
 
     </string-array>
+    <string name="title_activity_test">test</string>
 
 </resources>

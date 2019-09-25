@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/editProfile"
+        android:title=" Edit My Profile" />
+    <item
+        android:id="@+id/delete"
+        android:title="Delete My Profile" />
+    <item
+        android:id="@+id/signout"
+        android:title="Sign out" />
+
+
+</menu>

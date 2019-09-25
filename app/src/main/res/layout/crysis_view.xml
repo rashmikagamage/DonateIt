@@ -5,22 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".crysisView">
-
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="333dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/green"
-        app:layout_constraintBottom_toBottomOf="@+id/list_view_messages"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136" />
+    tools:context=".CrisisView">
 
     <TextView
         android:id="@+id/textView8"
@@ -46,10 +31,17 @@
 
     <ListView
         android:id="@+id/list_view_messages"
+<<<<<<< HEAD
         android:layout_width="225dp"
         android:layout_height="551dp"
         android:layout_marginStart="144dp"
         android:layout_marginTop="184dp"
+=======
+        android:layout_width="392dp"
+        android:layout_height="543dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="116dp"
+>>>>>>> 6b9bdf77e3ceb3227ac1249077471611fab6f5c4
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
