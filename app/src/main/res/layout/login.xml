@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:backgroundTintMode="multiply"
-    tools:context=".MainActivity">
+    tools:context=".Login">
 
     <include
         android:id="@+id/toolbar"
@@ -91,8 +91,8 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="269dp"
-        android:layout_height="44dp"
+        android:layout_width="278dp"
+        android:layout_height="56dp"
 
         android:layout_marginTop="8dp"
         android:background="@drawable/buttonshape"
@@ -100,9 +100,10 @@
         android:textColor=" #ffffff "
         app:layout_constraintBottom_toBottomOf="@+id/videoView"
         app:layout_constraintEnd_toEndOf="@+id/videoView"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/videoView"
         app:layout_constraintTop_toTopOf="@+id/videoView"
-        app:layout_constraintVertical_bias="0.726" />
+        app:layout_constraintVertical_bias="0.721" />
 
     <Button
         android:id="@+id/singup_login"
@@ -201,18 +202,19 @@
 
     <ProgressBar
         android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="183dp"
+        android:layout_height="116dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:outlineSpotShadowColor="@color/green"
 
         app:layout_constraintBottom_toBottomOf="@+id/videoView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/videoView"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.214" />
 
 
 </android.support.constraint.ConstraintLayout>

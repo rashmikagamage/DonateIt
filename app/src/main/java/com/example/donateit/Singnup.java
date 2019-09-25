@@ -19,22 +19,29 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Singnup extends AppCompatActivity {
 
-        //DECLARING OBJECT TYPE REFERENCES
 
-        Button signup;
-        EditText name,email,location,password1,password2,phoneNumber;
-        DatabaseReference db;
-        User user;
-        String uid;
-        FirebaseAuth auth;
+    /********************************** Creating Objects ****************************************************/
 
+    private Button signup;
+    private EditText name, email, location, password1, password2, phoneNumber;
+    private DatabaseReference db;
+    private User user;
+    private String uid;
+    private FirebaseAuth auth;
+
+    /********************************************************************************************************/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singnup);
 
-        //get id of instances
+        /* ********************************* HIDING ACTION BAR ***************************************************/
+
+        getSupportActionBar().hide();
+
+        /* *********************************  INITIALIZING OBJECTS ***************************************************/
+
         signup = findViewById(R.id.signup_signup);
         name = findViewById(R.id.name_signup);
         email = findViewById(R.id.email_signin);
@@ -43,53 +50,62 @@ public class Singnup extends AppCompatActivity {
         location = findViewById(R.id.location);
         phoneNumber = findViewById(R.id.contactNo_edituser);
 
+        //USER OBJECT
         user = new User();
-
 
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                //FIREBASE OBJECTS
+
                 db = FirebaseDatabase.getInstance().getReference().child("Users");
                 auth = FirebaseAuth.getInstance();
 
+                /* ********************************* VALIDATIN SIGN UP FORM  ***************************************************/
 
-                try{
+                try {
 
-                   if (TextUtils.isEmpty(email.getText().toString()) || !isValidEmail(email.getText().toString())) {
+                    //EMAIL VALIDATE
+                    if (TextUtils.isEmpty(email.getText().toString()) || !isValidEmail(email.getText().toString())) {
 
-                       Toast.makeText(getApplicationContext(), "Please enter an valid  E-mail ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Please enter an valid  E-mail ", Toast.LENGTH_SHORT).show();
 
-                   }else if(TextUtils.isEmpty(name.getText().toString())){
+                        //NAME VALIDATE
+                    } else if (TextUtils.isEmpty(name.getText().toString())) {
 
-                           Toast.makeText(getApplicationContext(),"Please enter Name",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Please enter Name", Toast.LENGTH_SHORT).show();
 
-                    }else if (TextUtils.isEmpty(phoneNumber.getText().toString()) || phoneNumber.length() != 10 ){
+                        //NUMBER VALIDATE
+                    } else if (TextUtils.isEmpty(phoneNumber.getText().toString()) || phoneNumber.length() != 10) {
 
-                        Toast.makeText(getApplicationContext(),"Please enter a valid Contact Number ",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Please enter a valid Contact Number ", Toast.LENGTH_SHORT).show();
+                        //LOCATION VALIDATE
+                    } else if (TextUtils.isEmpty(location.getText().toString())) {
 
-                    }else if (TextUtils.isEmpty(location.getText().toString())){
+                        Toast.makeText(getApplicationContext(), "Please enter Location ", Toast.LENGTH_SHORT).show();
 
-                        Toast.makeText(getApplicationContext(),"Please enter Location ",Toast.LENGTH_SHORT).show();
+                    } else if (TextUtils.isEmpty(password1.getText().toString()) || password1.getText().toString().length() < 6) {
 
-                    }else if (TextUtils.isEmpty(password1.getText().toString()) ||  password1.getText().toString().length() < 6){
-
-                        Toast.makeText(getApplicationContext(),"Password should be more than 5 characters",Toast.LENGTH_SHORT).show();
-
-                    }else if (TextUtils.isEmpty(password2.getText().toString())){
-
-                        Toast.makeText(getApplicationContext(),"Please Re-Type password ",Toast.LENGTH_SHORT).show();
-
-                    }else if (!((password1.getText().toString().trim()).equals(password2.getText().toString().trim()))){
-
-                        Toast.makeText(getApplicationContext(),password1.getText().toString(),Toast.LENGTH_SHORT).show();
-
-
+                        Toast.makeText(getApplicationContext(), "Password should be more than 5 characters", Toast.LENGTH_SHORT).show();
                         password1.setText("");
                         password2.setText("");
 
-                    }else {
+                    } else if (TextUtils.isEmpty(password2.getText().toString())) {
+
+                        Toast.makeText(getApplicationContext(), "Please Re-Type password ", Toast.LENGTH_SHORT).show();
+
+                        //CHECKING BOTH PASSWORDS
+                    } else if (!((password1.getText().toString().trim()).equals(password2.getText().toString().trim()))) {
+
+                        Toast.makeText(getApplicationContext(), password1.getText().toString(), Toast.LENGTH_SHORT).show();
+                        password1.setText("");
+                        password2.setText("");
+
+                    } else {
+
+                        /* ********************************* IF FORM IS OKAY DATA INSERT INTO OBJECT  ***************************************************/
 
                         user.setName(name.getText().toString().trim());
                         user.setEmail(email.getText().toString().trim());
@@ -98,43 +114,37 @@ public class Singnup extends AppCompatActivity {
                         user.setLocation(location.getText().toString().trim());
 
 
-                        //Authetication of email and password to FIREBASE
+
+                        /* ********************************* CREATE USER   ***************************************************/
 
                         auth.createUserWithEmailAndPassword(user.getEmail(), user.getPassword())
-                               .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                   @Override
-                                   public void onComplete(@NonNull Task<AuthResult> task) {
-                                       if (task.isSuccessful()) {
-                                           db.child(changeEmail(user.getEmail())).setValue(user);  //save user details
-                                           Toast.makeText(getApplicationContext(), "Registration successful!", Toast.LENGTH_LONG).show();
-                                           Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                                           startActivity(intent);
-                                       }
-                                       else {
+                                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        if (task.isSuccessful()) {
+                                            db.child(changeEmail(user.getEmail())).setValue(user);  //save user details
+                                            Toast.makeText(getApplicationContext(), "Registration successful!", Toast.LENGTH_LONG).show();
+                                            Intent intent = new Intent(getApplicationContext(), Login.class);
+                                            startActivity(intent);
+                                        } else {
 
-                                           Toast.makeText(getApplicationContext(), "Registration failed! Please try again later", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(getApplicationContext(), "Registration failed! Please try again later", Toast.LENGTH_LONG).show();
 
-                                       }
-                                   }
-                               });
-
-
+                                        }
+                                    }
+                                });
 
 
                     }
 
 
-
-                }catch(NumberFormatException ne){
-                    Toast.makeText(getApplicationContext(),"Invalid contact Number",Toast.LENGTH_LONG).show();
+                } catch (NumberFormatException ne) {
+                    Toast.makeText(getApplicationContext(), "Invalid contact Number", Toast.LENGTH_LONG).show();
                 }
 
 
             }
         });
-
-
-
 
 
     }
@@ -150,18 +160,19 @@ public class Singnup extends AppCompatActivity {
 
     //CONTACT NUMBER VALIDATION METHOD
     public boolean isValidPhone(CharSequence phone) {
-            if (TextUtils.isEmpty(phone)) {
-                return false;
-            } else {
-                return android.util.Patterns.PHONE.matcher(phone).matches();
-            }
+        if (TextUtils.isEmpty(phone)) {
+            return false;
+        } else {
+            return android.util.Patterns.PHONE.matcher(phone).matches();
+        }
     }
 
-    public String changeEmail(String email){
+    //CHANGING EMAIL TO A KEY
+    public String changeEmail(String email) {
 
-           String newEmail1 =  email.replace('@','0');
-           String newEmail2 = newEmail1.replace('.','0');
-           return newEmail2;
+        String newEmail1 = email.replace('@', '0');
+        String newEmail2 = newEmail1.replace('.', '0');
+        return newEmail2;
 
     }
 }

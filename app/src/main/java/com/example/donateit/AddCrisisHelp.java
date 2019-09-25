@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Crisis extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class AddCrisisHelp extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     AnimationDrawable crysisAnimation;
     EditText message,contactNo,location;
@@ -37,7 +37,7 @@ public class Crisis extends AppCompatActivity implements AdapterView.OnItemSelec
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crisis);
+        setContentView(R.layout.add_crisis_help);
 
         //Animated alert button
 
@@ -49,7 +49,6 @@ public class Crisis extends AppCompatActivity implements AdapterView.OnItemSelec
         sendthem =findViewById(R.id.send_them);
         location = findViewById(R.id.location_crysis);
         contactNo = findViewById(R.id.phoneNo_Crysis);
-        viewhelp = findViewById(R.id.viewhelp);
 
         crysisHelp = new CrysisHelp();
         firebaseAuth =FirebaseAuth.getInstance();
@@ -80,6 +79,9 @@ public class Crisis extends AppCompatActivity implements AdapterView.OnItemSelec
                 db.child(sid).setValue(crysisHelp);
                 ID=ID+1;
                 Toast.makeText(getApplicationContext(),"Thank you!!",Toast.LENGTH_SHORT).show();
+                message.setText("");
+                location.setText("");
+                contactNo.setText("");
 
             }
         });
