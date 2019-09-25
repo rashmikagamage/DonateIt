@@ -44,7 +44,7 @@ public class QuizActivity extends AppCompatActivity {
                     mScore = mScore + 1;
                     updateScore(mScore);
                     updateQuestion();
-                    //This line of code is optiona
+                    //This line of code is option
                     Toast.makeText(QuizActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {

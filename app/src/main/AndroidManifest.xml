@@ -13,6 +13,10 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".addVolunteer"></activity>
         <activity android:name=".QuizActivity" />
+        <activity android:name=".SocialService"/>
+        <activity android:name=".Intro"/>
+        <activity android:name=".counselling"/>
+        <activity android:name=".HowTo"/>
         <activity android:name=".social_worker" />
         <activity android:name=".EditUser" />
         <activity android:name=".testgit" />
